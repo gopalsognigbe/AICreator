@@ -79,51 +79,6 @@ function Spinner({ className = "w-8 h-8" }) {
   );
 }
 
-function SimulatedNavbar() {
-  return (
-    <nav className="relative z-20 flex items-center justify-between px-6 md:px-8 py-5">
-      <div className="grid grid-cols-2 gap-[3px] w-9 h-9 shrink-0">
-        <span className="bg-black text-white font-black text-[10px] flex items-center justify-center leading-none">
-          A
-        </span>
-        <span className="bg-black text-white font-black text-[10px] flex items-center justify-center leading-none">
-          I
-        </span>
-        <span className="bg-white/40" />
-        <span className="bg-black" />
-        <span className="bg-black" />
-        <span className="bg-white/40" />
-        <span className="bg-white/40" />
-        <span className="bg-black" />
-      </div>
-
-      <div className="absolute left-1/2 -translate-x-1/2 flex items-center gap-1 bg-neutral-900/90 backdrop-blur-sm rounded-full p-1.5">
-        <div className="flex items-center gap-2.5 px-4 py-2">
-          <span className="flex flex-col gap-[5px]">
-            <span className="block w-4 h-[1.5px] bg-white rounded-full" />
-            <span className="block w-4 h-[1.5px] bg-white rounded-full" />
-            <span className="block w-3 h-[1.5px] bg-white rounded-full" />
-          </span>
-          <span className="text-white text-sm font-medium">Menu</span>
-        </div>
-        <span className="flex items-center justify-center w-10 h-10 text-base">
-          ☀️
-        </span>
-        <span className="flex items-center justify-center min-w-[48px] h-10 px-3 text-white text-xs font-medium tabular-nums border border-white/20 rounded-full">
-          0%
-        </span>
-      </div>
-
-      <button
-        type="button"
-        className="bg-black text-white text-sm font-medium px-5 py-2.5 rounded-full shrink-0"
-      >
-        Get started
-      </button>
-    </nav>
-  );
-}
-
 function SlideCard({ slide, active }) {
   return (
     <div
@@ -294,9 +249,7 @@ export default function SectionScrollPin() {
         ))}
 
         <div className="relative z-10 h-full flex flex-col text-white">
-          <SimulatedNavbar />
-
-          <span className="absolute top-20 md:top-8 right-4 md:right-12 text-4xl md:text-6xl lg:text-8xl font-bold text-white/20 leading-none pointer-events-none transition-all duration-700">
+          <span className="absolute top-8 right-4 md:right-12 text-4xl md:text-6xl lg:text-8xl font-bold text-white/20 leading-none pointer-events-none transition-all duration-700">
             {slide.number}
           </span>
 
